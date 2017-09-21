@@ -1,15 +1,11 @@
-    angular.module('myApp')
+angular.module('myApp')
     .controller('selectController', function($scope, APIservice) {
-        
         APIservice.getData().then(function(response) {
             $scope.users = response.data;
         });
-
-        $scope.selectedUser= $scope.users;
-        
     })
-    .controller('userController', function($scope) {
-        
-        $scope.singleUser= $scope.selectController;
-        $scope.myParam = "Some age";
+    .controller('userController', function($scope, APIservice) {
+        APIservice.getData().then(function(response) {
+            $scope.users = response.data;
+        });
     })

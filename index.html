@@ -11,26 +11,28 @@
 </head>
 
 <body class="ng-cloak">
-    <div class="container-fluid" >
+    <div class="container-fluid">
         <div ng-controller="selectController as Controller">
-        <h3>Open USERSLIST</h3>
-        <select class="custom-select" ng-model="userData">
-            <option ng-repeat="model in users" class="names" value="{{model}}">{{model.name}}</option>
-        </select>
-        
-        <p>
-            {{userData}}
-        </p>
+            <h3>Open USERSLIST</h3>
+            <select class="custom-select" ng-model="userData">
+                <option ng-repeat="model in users" class="names" value="{{model}}">{{model.name}}</option>
+            </select>
+            <p>{{userData}}</p>
         </div>
-        <hr><hr>
+        <hr>
+        <hr>
+
         <div ng-controller="userController as Controller">
-                <my-datauser></my-datauser>
+            <my-datauser></my-datauser>
         </div>
     </div>
+    <hr>
+
+
     <script src="module.js"></script>
     <script src="service.js"></script>
     <script src="controller.js"></script>
-    <script src="directive.js"></script>
+    <script src="components.js"></script>
 </body>
 
 </html>
