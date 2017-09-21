@@ -5,7 +5,5 @@ angular.module('myApp')
         });
     })
     .controller('userController', function($scope, APIservice) {
-        APIservice.getData().then(function(response) {
-            $scope.users = response.data;
-        });
+        
     })
