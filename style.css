@@ -4,5 +4,13 @@ body {
 }
 
 .names{
-    font-style: italic !important;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.money{
+    font-weight: bold; 
+}
+.contacts{
+    color: rgba(92, 189, 189, 0.9);
 }

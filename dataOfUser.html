@@ -1,4 +1,33 @@
-<h3>You chose is <span>{{$ctrl.user.name}}</span></h3>
-<h4>His age is <span>{{$ctrl.user.age}}</span></h4>
+<h3>You chose is <span class="names">{{$ctrl.user.name}}</span></h3>
+<br>
 
+<h4 ng-show="$ctrl.user.gender=='male'">His age is <span>{{$ctrl.user.age}}.</span>
+<br>
+    He works in the company {{$ctrl.user.company}}
+<br>
+    His email is <span class="contacts">{{$ctrl.user.email}}</span> and his phone number
+    <span class="contacts">{{$ctrl.user.phone}}</span>
+<br>
+    His home address is {{$ctrl.user.address}}
+<br>
+    His favorite fruit is {{$ctrl.user.favoriteFruit}}
+<br>
+    And also, he has a <span class="money">{{$ctrl.user.balance}}</span> in his bank account !!!
+</h4>
+
+<h4 ng-show="$ctrl.user.gender=='female'">She age is <span>{{$ctrl.user.age}}.</span>
+    <br>
+        She works in the company {{$ctrl.user.company}}
+    <br>
+    She email is <span class="contacts">{{$ctrl.user.email}}</span> and She phone number
+        <span class="contacts">{{$ctrl.user.phone}}</span>
+    <br>
+    She home address is {{$ctrl.user.address}}
+    <br>
+    Her favorite fruit is {{$ctrl.user.favoriteFruit}}
+    <br>
+        And also, she has a <span class="money">{{$ctrl.user.balance}}</span> in his bank account !!!
+    </h4>
+<hr>
+<br>
 <h1 ng-click="$ctrl.test()">Click me!</h1>

@@ -14,5 +14,8 @@ angular.module('myApp')
             this.test = function () {
                 console.log(this.user);
             }
+            //this.paramGender = $user.gender == "male" ? true : false;
+            //this.paramGender = false;
+            
         }
     });

@@ -15,8 +15,8 @@
         <div ng-controller="selectController as Controller">
         <h3>Open USERS LIST</h3>
         <hr>
-            <select ng-options="item as item.name for item in users track by item._id" ng-model="selected"></select>
-        <hr><hr>
+            <select class="custom-select" ng-options="item as item.name for item in users track by item._id" ng-model="selected"></select>
+            <hr><hr>
             <my-datauser user="selected"></my-datauser>
         </div>
         <hr><hr>
