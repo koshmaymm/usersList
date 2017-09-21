@@ -6,33 +6,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="angular.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body class="ng-cloak">
-    <div class="container-fluid">
+    <div class="container-fluid" >
         <div ng-controller="selectController as Controller">
-            <h3>Open USERSLIST</h3>
-            <select class="custom-select" ng-model="userData">
-                <option ng-repeat="model in users" class="names" value="{{model}}">{{model.name}}</option>
-            </select>
-            <p>{{userData}}</p>
+        <h3>Open USERS LIST</h3>
+        <hr>
+            <select ng-options="item as item.name for item in users track by item._id" ng-model="selected"></select>
+        <hr><hr>
+            <my-datauser user="selected"></my-datauser>
         </div>
-        <hr>
-        <hr>
+        <hr><hr>
 
-        <div ng-controller="userController as Controller">
-            <my-datauser></my-datauser>
-        </div>
+
+
     </div>
-    <hr>
-
-
     <script src="module.js"></script>
     <script src="service.js"></script>
     <script src="controller.js"></script>
-    <script src="components.js"></script>
+    <script src="directive.js"></script>
 </body>
 
 </html>
