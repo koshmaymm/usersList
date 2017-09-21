@@ -10,21 +10,27 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body ng-controller="myController as Controller" class="ng-cloak">
-    <div class="container-fluid">
+<body class="ng-cloak">
+    <div class="container-fluid" >
+        <div ng-controller="selectController as Controller">
         <h3>Open USERSLIST</h3>
-        <select class="custom-select" ng-model="singleUser">
+        <select class="custom-select" ng-model="userData">
             <option ng-repeat="model in users" class="names" value="{{model}}">{{model.name}}</option>
         </select>
+        
+        <p>
+            {{userData}}
+        </p>
+        </div>
         <hr><hr>
-        <h4> You chose is {{singleUser}}</h4>
-        <hr><hr>
-        <h4> His age is {{myParam}}</h4>
-    
+        <div ng-controller="userController as Controller">
+                <my-datauser></my-datauser>
+        </div>
     </div>
     <script src="module.js"></script>
     <script src="service.js"></script>
     <script src="controller.js"></script>
+    <script src="directive.js"></script>
 </body>
 
 </html>
