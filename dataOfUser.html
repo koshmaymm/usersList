@@ -31,3 +31,8 @@
 <hr>
 <br>
 <h1 ng-click="$ctrl.test()">Click me!</h1>
+<ol> <span ng-show="$ctrl.user.gender=='male'">His</span><span ng-show="$ctrl.user.gender=='female'">Her</span> friends are:
+    <li>{{$ctrl.user.friends[0].name}}</li>
+    <li>{{$ctrl.user.friends[1].name}}</li>
+    <li>{{$ctrl.user.friends[2].name}}</li>
+</ol>
