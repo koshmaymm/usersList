@@ -10,7 +10,6 @@
     })
     .controller('userController', function($scope) {
         
-       
-        $scope.singleUser= $scope.users;
-        
+        $scope.singleUser= $scope.selectController;
+        $scope.myParam = "Some age";
     })
